@@ -1,4 +1,5 @@
-br\com\fatec\model\Produto.class
 br\com\fatec\controller\ComboBox_ViewController.class
-br\com\fatec\controller\Cliente_cadastroController.class
 br\com\fatec\Principal.class
+br\com\fatec\model\Produto.class
+br\com\fatec\controller\Cliente_cadastroController.class
+br\com\fatec\controller\MenuViewController.class
