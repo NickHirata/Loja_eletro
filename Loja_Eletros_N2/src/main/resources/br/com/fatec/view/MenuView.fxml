@@ -16,10 +16,10 @@
             <Menu mnemonicParsing="false" text="Funcionário" />
             <Menu mnemonicParsing="false" text="Cadastros">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Funcionário" />
-                  <MenuItem mnemonicParsing="false" text="Loja" />
-                  <MenuItem mnemonicParsing="false" text="Cliente" />
-                  <MenuItem mnemonicParsing="false" text="Produto" />
+                  <MenuItem fx:id="mi_funcionario" mnemonicParsing="false" onAction="#mi_funcionario_Click" text="Funcionário" />
+                  <MenuItem fx:id="mi_loja" mnemonicParsing="false" onAction="#mi_loja_Click" text="Loja" />
+                  <MenuItem fx:id="mi_cliente" mnemonicParsing="false" onAction="#mi_cliente_click" text="Cliente" />
+                  <MenuItem fx:id="mi_produto" mnemonicParsing="false" onAction="#mi_produto_Click" text="Produto" />
                </items>
             </Menu>
         </menus>
