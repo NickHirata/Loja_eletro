@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import br.com.fatec.DAO.ConexaoBanco;
+import java.sql.Connection;
 
 import java.io.IOException;
 
@@ -13,11 +15,19 @@ import java.io.IOException;
  */
 public class Principal extends Application {
 
+    public static Scene getScene() {
+        return scene;
+    }
+
+    public static void setScene(Scene scene) {
+        Principal.scene = scene;
+    }
+
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/Cliente_cadastro"));
+        scene = new Scene(loadFXML("view/MenuView"));
         stage.setScene(scene);
         stage.show();
     }
@@ -32,7 +42,25 @@ public class Principal extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+       // launch();
+        
+         // Testando a conexão com o banco de dados
+        Connection conexao = ConexaoBanco.conectar();
+        
+        // Verificando se a conexão foi bem-sucedida
+        if (conexao != null) {
+            System.out.println("Conexão bem-sucedida. Você está conectado ao banco de dados!");
+            
+            // operaçoes com o banco
+            // ...
+            
+            // Fechando a conexão após a conclusão das operações
+            ConexaoBanco.desconectar(conexao);
+        } else {
+            System.out.println("Falha na conexão com o banco de dados.");
+        }
+        
+        
     }
 
 }

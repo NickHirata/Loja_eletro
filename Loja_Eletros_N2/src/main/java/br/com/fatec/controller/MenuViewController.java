@@ -6,6 +6,7 @@ package br.com.fatec.controller;
  * and open the template in the editor.
  */
 
+import br.com.fatec.Principal;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -47,9 +48,10 @@ public class MenuViewController implements Initializable {
     @FXML
     private void mi_funcionario_Click(ActionEvent event) {
     
+      
             Node source = (Node) event.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("funcionario_cadastro.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/fatec/view/produtos_cadastro.fxml"));
             Parent menuParent = null;
             try {
                 menuParent = loader.load();
@@ -59,29 +61,15 @@ public class MenuViewController implements Initializable {
             }
             Scene menuScene = new Scene(menuParent);
 
-            // Carrega a cena
+   
             stage.setScene(menuScene);
             stage.show();
     }
 
     @FXML
-    private void mi_loja_Click(ActionEvent event) {
-
-            Node source = (Node) event.getSource();
-            Stage stage = (Stage) source.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/fatec/view/Loja_cadastro.fxml"));
-            Parent menuParent = null;
-            try {
-                menuParent = loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-                // Trate a exceção conforme necessário
-            }
-            Scene menuScene = new Scene(menuParent);
-
-            // Carrega a cena 
-            stage.setScene(menuScene);
-            stage.show();
+    private void mi_loja_Click(ActionEvent event) throws IOException {
+        
+        //Principal.setRoot("view/Loja_cadastro");
     }
 
         @FXML

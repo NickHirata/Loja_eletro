@@ -13,12 +13,11 @@ import java.sql.SQLException;
  * @author nicol
  */
 
-
 public class ConexaoBanco {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
-    private static final String USUARIO = "admin";
-    private static final String SENHA = "1234";
+    private static final String URL = "jdbc:mysql://localhost:3306/loja_eletro"; // URL correta para o banco de dados MySQL
+    private static final String USUARIO = "root";
+    private static final String SENHA = ""; 
 
     public static Connection conectar() {
         Connection conexao = null;
@@ -44,4 +43,5 @@ public class ConexaoBanco {
         }
     }
 }
+
 
