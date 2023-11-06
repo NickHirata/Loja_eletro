@@ -27,7 +27,7 @@ public class ConexaoBanco {
             System.out.println("Conexão bem-sucedida!");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-            System.out.println("Erro na conexão com o banco de dados.");
+            System.out.println("Erro na conexão com o banco de dados. (Classe ConexãoBanco)");
         }
         return conexao;
     }
