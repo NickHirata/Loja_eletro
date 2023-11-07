@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -9,9 +10,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="935.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.Cliente_cadastroController">
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="935.0" style="-fx-background-color: #c3c3c3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.Cliente_cadastroController">
    <children>
-      <GridPane layoutX="118.0" layoutY="189.0" prefHeight="244.0" prefWidth="724.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#34baab" height="187.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="935.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="412.0" layoutX="80.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#466067" height="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="935.0" />
+      <GridPane layoutX="118.0" layoutY="172.0" prefHeight="244.0" prefWidth="724.0">
          <children>
             <Label fx:id="lblNome" text="Nome" />
             <Label fx:id="lblDescricao" text="Endereço" GridPane.rowIndex="2" />
@@ -42,16 +46,16 @@
             <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <HBox layoutX="336.0" layoutY="490.0" prefHeight="31.0" prefWidth="264.0" spacing="50.0">
+      <HBox layoutX="380.0" layoutY="461.0" prefHeight="31.0" prefWidth="201.0" spacing="50.0">
          <children>
             <Button fx:id="btn_voltar" mnemonicParsing="false" onAction="#btn_voltar_Click" text="Voltar" />
-            <Button fx:id="btn_inserir" mnemonicParsing="false" onAction="#btn_inserir_Click" prefHeight="25.0" prefWidth="124.0" text="Inserir cliente" />
+            <Button fx:id="btn_inserir" mnemonicParsing="false" onAction="#btn_inserir_Click" prefHeight="25.0" prefWidth="87.0" text="Inserir cliente" />
          </children>
          <padding>
             <Insets right="10.0" />
          </padding>
       </HBox>
-      <Text layoutX="291.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de cliente" wrappingWidth="377.2890625">
+      <Text layoutX="279.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de cliente" wrappingWidth="377.2890625">
          <font>
             <Font size="44.0" />
          </font>

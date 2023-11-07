@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
@@ -30,6 +31,8 @@ public class Principal extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        AnchorPane anchorPane = new AnchorPane();
+        anchorPane.setStyle("-fx-background-color: #C3C3C3;");
         scene = new Scene(loadFXML("view/MenuView"));
         stage.setScene(scene);
         stage.show();
@@ -45,8 +48,8 @@ public class Principal extends Application {
     }
 
     public static void main(String[] args) {
-       // launch();
-                PreparedStatement stmt = null;
+       launch();
+        PreparedStatement stmt = null;
         ResultSet rs = null;
          // Testando a conexão com o banco de dados
         try {

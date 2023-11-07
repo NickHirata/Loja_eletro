@@ -28,10 +28,13 @@ public class ComboBox_ViewController implements Initializable {
 
     @FXML
     private Label lblDescricao;
+    @FXML
     private TextField txtCodigo;
+    @FXML
     private TextField txtDescricao;
     private TextField txtPreco;
     //Tem que informar que a combobox receberá dados do tipo Produto
+    @FXML
     private ComboBox<Produto> cbProduto;
     
     //Variaveis auxiliares
@@ -39,27 +42,17 @@ public class ComboBox_ViewController implements Initializable {
     //coleção que conterá os dados para sere exibidos demtro da combobox
     private ObservableList<Produto> produtos = FXCollections.observableArrayList();
     @FXML
-    private Label lbl_nome;
+    private Label lblCodigo;
     @FXML
-    private Label lbl_endereco;
+    private Label lblPreco;
     @FXML
-    private TextField txt_nome;
+    private Label lblDescricao1;
     @FXML
-    private ComboBox<?> cb_cidade;
+    private TextField txtCodigo1;
     @FXML
-    private Label lbl_cidade;
+    private Button btnInserirCombo;
     @FXML
-    private TextField cb_endereco;
-    @FXML
-    private Label lbl_telefone;
-    @FXML
-    private TextField cb_telefone;
-    @FXML
-    private TextField txt_email;
-    @FXML
-    private Button btn_voltar;
-    @FXML
-    private Button btn_inserir;
+    private Button btnFechar;
     
     /**
      * Initializes the controller class.
@@ -96,6 +89,7 @@ public class ComboBox_ViewController implements Initializable {
         return produto;
     }
     
+    @FXML
     private void btnInserirCombo_Click(ActionEvent event) {
         //transfere os dados da tela para o objeto de model (produt)
         produto = moveViewParaModel();
@@ -141,17 +135,11 @@ public class ComboBox_ViewController implements Initializable {
         }
     }
 
+    @FXML
     private void btnFechar_Click(ActionEvent event) {
         //fecha o sistema
         System.exit(0);
     }
 
-    @FXML
-    private void btn_voltar_Click(ActionEvent event) {
-    }
-
-    @FXML
-    private void btn_inserir_Click(ActionEvent event) {
-    }
     
 }

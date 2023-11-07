@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.MenuViewController">
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.MenuViewController">
    <children>
-      <MenuBar layoutY="7.0" prefHeight="45.0" prefWidth="993.0">
+      <MenuBar prefHeight="45.0" prefWidth="993.0" style="-fx-background-color: C3C3C3;">
         <menus>
           <Menu mnemonicParsing="false" text="Home" />
           <Menu mnemonicParsing="false" text="Unidade" />
@@ -24,5 +25,6 @@
             </Menu>
         </menus>
       </MenuBar>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#34baab" height="187.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="993.0" />
    </children>
 </AnchorPane>

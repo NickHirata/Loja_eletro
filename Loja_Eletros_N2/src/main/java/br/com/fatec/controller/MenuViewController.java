@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -48,7 +49,7 @@ public class MenuViewController implements Initializable {
     @FXML
     private void mi_funcionario_Click(ActionEvent event) {
     
-      
+            
             Node source = (Node) event.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/fatec/view/produtos_cadastro.fxml"));
@@ -57,7 +58,7 @@ public class MenuViewController implements Initializable {
                 menuParent = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
-                // Trate a exceção conforme necessário
+                //Trate a exceção conforme necessário
             }
             Scene menuScene = new Scene(menuParent);
 
@@ -72,7 +73,6 @@ public class MenuViewController implements Initializable {
         //Principal.setRoot("view/Loja_cadastro");
     }
 
-        @FXML
        private BorderPane mainPane; // Referência ao contêiner de layout do MenuView.fxml
 
        @FXML
@@ -106,6 +106,25 @@ public class MenuViewController implements Initializable {
             Scene menuScene = new Scene(menuParent);
 
    
+            stage.setScene(menuScene);
+            stage.show();
+    }
+
+    private void btn_click(ActionEvent event) {
+            // Lógica para voltar para a tela de menu
+            Node source = (Node) event.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/com/fatec/view/produtos_cadastro"));
+            Parent menuParent = null;
+            try {
+                menuParent = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Trate a exceção conforme necessário
+            }
+            Scene menuScene = new Scene(menuParent);
+
+            // Carrega a cena da tela de menu
             stage.setScene(menuScene);
             stage.show();
     }

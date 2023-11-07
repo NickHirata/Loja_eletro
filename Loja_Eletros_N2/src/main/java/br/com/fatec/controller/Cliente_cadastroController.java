@@ -7,7 +7,6 @@ package br.com.fatec.controller;
 
 
 import br.com.fatec.model.Cliente;
-import br.com.fatec.model.Produto;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
