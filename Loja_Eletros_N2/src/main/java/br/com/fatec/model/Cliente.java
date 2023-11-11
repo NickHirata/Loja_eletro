@@ -5,11 +5,20 @@
  */
 package br.com.fatec.model;
 
+import br.com.fatec.Principal;
+import br.com.fatec.controller.Cliente_cadastroController;
+import java.io.IOException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 /**
  *
  * @author nicol
  */
-public class Cliente {
+public class Cliente extends Application {
     private String nome;
     private int cpf;
     private String email;
@@ -17,6 +26,33 @@ public class Cliente {
     private String endereco; 
     private String unidade;
     private String funcionario;
+ 
+    
+    public static Stage tela;
+    
+    
+    //alterar tela do prof
+    
+    @Override
+    
+    public void start(Stage tela) throws IOException {
+        setStage(tela);
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(Principal.class.getResource("Cliente_cadastro.fxml"));
+        Parent root = fxmlLoader.load();
+        Cliente_cadastroController controler = fxmlLoader.getController();
+        
+        Scene scene = new Scene(root, 640, 480);
+        
+        tela.setScene(scene);
+        tela.show();        
+
+    }
+    
+    public static void setStage(Stage t) {
+        tela = t;
+    }
+
 
     public String getNome() {
         return nome;
@@ -85,6 +121,21 @@ public class Cliente {
         hash = 11 * hash + this.cpf;
         return hash;
     }
+
+    public Cliente() {
+    }
+
+    public Cliente(String nome, int cpf, String email, int telefone, String endereco, String unidade, String funcionario) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.telefone = telefone;
+        this.endereco = endereco;
+        this.unidade = unidade;
+        this.funcionario = funcionario;
+    }
+    
+    
 
     @Override
     public boolean equals(Object obj) {
