@@ -10,16 +10,26 @@ package br.com.fatec.model;
  * @author Aluno
  */
 public class Produto {
-        private int codigo;
+        private int produtoID;
+        private String nome;
         private String descricao;
+        private boolean voltagem;
         private double preco;
 
-    public int getCodigo() {
-        return codigo;
+    public int getProdutoID() {
+        return produtoID;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setProdutoID(int produtoID) {
+        this.produtoID = produtoID;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getDescricao() {
@@ -30,6 +40,14 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    public boolean isVoltagem() {
+        return voltagem;
+    }
+
+    public void setVoltagem(boolean voltagem) {
+        this.voltagem = voltagem;
+    }
+
     public double getPreco() {
         return preco;
     }
@@ -38,43 +56,5 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Produto(int codigo, String descricao, double preco) {
-        this.codigo = codigo;
-        this.descricao = descricao;
-        this.preco = preco;
-    }
 
-    public Produto() {
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 31 * hash + this.codigo;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Produto other = (Produto) obj;
-        if (this.codigo != other.codigo) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return descricao;
-    }
-        
 }

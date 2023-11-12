@@ -36,40 +36,40 @@ public class Cliente_cadastroController implements Initializable {
     @FXML
     private ComboBox<String> cb_funcionario;
     @FXML
+    private TextField txtNome;
+    @FXML
+    private ComboBox<String> cb_unidade;
+    @FXML
+    private TextField txt_cpf;
+    @FXML
+    private TextField txt_email;
+    @FXML
+    private TextField txt_endereco;
+    @FXML
+    private TextField txt_telefone;
+    @FXML
+    private Button btn_voltar;
+
+    /**
+     * Initializes the controller class.
+     */
+    private ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();
+    @FXML
     private Label lblNome;
     @FXML
     private Label lblDescricao;
     @FXML
     private Label lblPreco;
     @FXML
-    private TextField txtNome;
-    @FXML
-    private ComboBox<String> cb_unidade;
-    @FXML
     private Label lblDescricao1;
     @FXML
     private Label lblCodigo1;
     @FXML
-    private TextField txt_cpf;
-    @FXML
-    private TextField txt_email;
-    @FXML
     private Label lbl_cpf;
-    @FXML
-    private TextField txt_endereco;
     @FXML
     private Label lblCodigo111;
     @FXML
-    private TextField txt_telefone;
-    @FXML
-    private Button btn_voltar;
-    @FXML
     private Button btn_inserir;
-
-    /**
-     * Initializes the controller class.
-     */
-    private ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -225,7 +225,7 @@ public class Cliente_cadastroController implements Initializable {
     
     
 
-        @FXML
+    @FXML
         private void btn_inserir_Click(ActionEvent event) {
             cadastrarCliente();
 
